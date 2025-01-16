@@ -94,6 +94,10 @@ def render_callback(time):
         minutes = now.hour
         seconds = now.minute
         centiseconds = now.second
+    elif time > 3600:
+        minutes = int(time / 3600)
+        seconds = int((time % 3600) / 60)
+        centiseconds = int((time % 60))
     else:  # timer in countdown/up mode
         minutes = int((time % 3600) / 60)
         seconds = int(time % 60)
