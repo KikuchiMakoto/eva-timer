@@ -1,7 +1,7 @@
 {
     "name": "Evangelion Timer",
     "short_name": "EVA Timer",
-    "description": "修論提出まであと",
+    "description": "卒論提出まであと",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",
