@@ -1,6 +1,7 @@
 Evangelion timer that runs on browsers!
 
-[Try the PyScript implementation here!](https://master-timer.netlify.app/index-py.html)
+[Try the Master-Timer PyScript implementation here!](https://master-timer.netlify.app/index-py.html)
+[Try the Bachelor-Timer implementation here!](https://bachelor-timer.netlify.app/index-py.html)
 <br>
 <br>
 <img src="images/00_main.gif" width="500" />
@@ -38,7 +39,8 @@ You can configure the timer by launching it with URL parameters.
 For examples, try:
 <br>
 > [`https://master-timer.netlify.app/?autoplay=1&duration=345600&emergency_duration=3600`](https://master-timer.netlify.app/?autoplay=1&duration=345600&emergency_duration=3600)
-
+> [`https://bachelor-timer.netlify.app/?autoplay=1&duration=345600&emergency_duration=3600`](https://bachelor-timer.netlify.app/?autoplay=1&duration=345600&emergency_duration=3600)
+> 
 > The above URL will launch the EVA timer with 6 seconds count down and change to emergency in the last 3 seconds.
 
 Here is a list of configurable URL params:
