@@ -95,14 +95,19 @@ def render_callback(time):
         seconds = now.minute
         centiseconds = now.second
     elif time > 3600:
-        minutes = int(time / 3600)
-        seconds = int((time % 3600) / 60)
-        centiseconds = int((time % 60))
+        minutes = int(time / 3600) # hour
+        seconds = int((time % 3600) / 60) # minute
+        centiseconds = int((time % 60)) # sec
     else:  # timer in countdown/up mode
-        minutes = int((time % 3600) / 60)
-        seconds = int(time % 60)
-        centiseconds = int((time % 1) * 100)
-    if minutes < 10:
+        minutes = int((time % 3600) / 60) # minute
+        seconds = int(time % 60) # sec
+        centiseconds = int((time % 1) * 100) # milisec
+    if minutes >= 100:
+        gui_timer.select(SEL.TEXTGROUP_TIMER).show()
+        gui_timer.select(SEL.TEXTGROUP_SYSTEM_TIMER).hide()
+        gui_timer.select(SEL.TEXT_MIN_SEC).text_content(f"XX:{seconds:02d}")
+        gui_timer.select(SEL.TEXT_CENTISEC).text_content(f":{centiseconds:02d}")
+    elif minutes < 10:
         gui_timer.select(SEL.TEXTGROUP_TIMER).show()
         gui_timer.select(SEL.TEXTGROUP_SYSTEM_TIMER).hide()
         gui_timer.select(SEL.TEXT_MIN_SEC).text_content(f"{minutes:01d}:{seconds:02d}")
